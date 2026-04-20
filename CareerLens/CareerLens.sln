@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E2A5DA9E-A698-4CC7-9E8B-4E67DF2AE967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Domain", "CareerLens.Domain\CareerLens.Domain.csproj", "{EBD217A7-DB13-4D9E-9287-16A5235A0721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Application", "CareerLens.Application\CareerLens.Application.csproj", "{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Infrastructure", "CareerLens.Infrastructure\CareerLens.Infrastructure.csproj", "{C8DAA82C-F268-49ED-9649-37C304A0C741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Api", "CareerLens.Api\CareerLens.Api.csproj", "{12211FA5-3935-4AD9-A5DD-2766B384C8A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Contracts", "CareerLens.Contracts\CareerLens.Contracts.csproj", "{673FF08D-34D6-4153-A077-C77396349C2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBD217A7-DB13-4D9E-9287-16A5235A0721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD217A7-DB13-4D9E-9287-16A5235A0721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD217A7-DB13-4D9E-9287-16A5235A0721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD217A7-DB13-4D9E-9287-16A5235A0721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8DAA82C-F268-49ED-9649-37C304A0C741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DAA82C-F268-49ED-9649-37C304A0C741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DAA82C-F268-49ED-9649-37C304A0C741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DAA82C-F268-49ED-9649-37C304A0C741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12211FA5-3935-4AD9-A5DD-2766B384C8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12211FA5-3935-4AD9-A5DD-2766B384C8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12211FA5-3935-4AD9-A5DD-2766B384C8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12211FA5-3935-4AD9-A5DD-2766B384C8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{673FF08D-34D6-4153-A077-C77396349C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{673FF08D-34D6-4153-A077-C77396349C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{673FF08D-34D6-4153-A077-C77396349C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{673FF08D-34D6-4153-A077-C77396349C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBD217A7-DB13-4D9E-9287-16A5235A0721} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6199CC6F-94FC-4069-8C19-ABBE5AFA80C2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C8DAA82C-F268-49ED-9649-37C304A0C741} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{12211FA5-3935-4AD9-A5DD-2766B384C8A3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{673FF08D-34D6-4153-A077-C77396349C2C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99E685A5-0D8D-4853-AC34-AAEF50324D0B}
+	EndGlobalSection
+EndGlobal

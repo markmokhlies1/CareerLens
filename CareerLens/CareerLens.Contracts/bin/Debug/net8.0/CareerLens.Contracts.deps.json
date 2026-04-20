@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CareerLens.Contracts/1.0.0": {
+        "runtime": {
+          "CareerLens.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CareerLens.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

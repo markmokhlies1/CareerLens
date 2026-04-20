@@ -1,0 +1,12 @@
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\bin\Debug\net8.0\CareerLens.Domain.deps.json
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\bin\Debug\net8.0\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\bin\Debug\net8.0\CareerLens.Domain.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.csproj.AssemblyReference.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.AssemblyInfoInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.AssemblyInfo.cs
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.csproj.CoreCompileInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\refint\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\ref\CareerLens.Domain.dll

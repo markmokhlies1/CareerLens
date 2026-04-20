@@ -1,0 +1,15 @@
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\bin\Debug\net8.0\CareerLens.Application.deps.json
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\bin\Debug\net8.0\CareerLens.Application.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\bin\Debug\net8.0\CareerLens.Application.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\bin\Debug\net8.0\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\bin\Debug\net8.0\CareerLens.Domain.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.csproj.AssemblyReference.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.AssemblyInfoInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.AssemblyInfo.cs
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.csproj.CoreCompileInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLe.48D11493.Up2Date
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\refint\CareerLens.Application.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\ref\CareerLens.Application.dll

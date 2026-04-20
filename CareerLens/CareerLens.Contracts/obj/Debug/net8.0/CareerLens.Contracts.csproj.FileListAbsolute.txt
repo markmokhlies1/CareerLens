@@ -1,0 +1,11 @@
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\bin\Debug\net8.0\CareerLens.Contracts.deps.json
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\bin\Debug\net8.0\CareerLens.Contracts.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\bin\Debug\net8.0\CareerLens.Contracts.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.AssemblyInfoInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.AssemblyInfo.cs
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.csproj.CoreCompileInputs.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\refint\CareerLens.Contracts.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\ref\CareerLens.Contracts.dll
