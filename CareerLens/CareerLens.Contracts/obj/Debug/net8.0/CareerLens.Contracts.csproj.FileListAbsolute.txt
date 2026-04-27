@@ -9,3 +9,8 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\Career
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\refint\CareerLens.Contracts.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.pdb
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\ref\CareerLens.Contracts.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\bin\Debug\net8.0\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\bin\Debug\net8.0\CareerLens.Domain.pdb
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.csproj.AssemblyReference.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLens.Contracts.sourcelink.json
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Contracts\obj\Debug\net8.0\CareerLe.7702B163.Up2Date

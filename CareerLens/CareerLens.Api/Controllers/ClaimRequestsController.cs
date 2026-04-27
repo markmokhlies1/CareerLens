@@ -6,7 +6,7 @@ using CareerLens.Application.Features.CompanyClaimRequests.Queries.Admin.GetClai
 using CareerLens.Application.Features.CompanyClaimRequests.Queries.Admin.GetClaimRequestes;
 using CareerLens.Application.Features.CompanyClaimRequests.Queries.Employer.GetClaimRequestById;
 using CareerLens.Application.Features.CompanyClaimRequests.Queries.Employer.GetEmployerClaimRequestes;
-using CareerLens.Contracts.Requests.Companies;
+using CareerLens.Contracts.Requests.ClaimRequestes;
 using CareerLens.Domain.Companies.CompanyClaimRequests.Enums;
 using CareerLens.Domain.Companies.CompanyMembers.Enums;
 using CareerLens.Domain.DomainUsers.Enums;

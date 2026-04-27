@@ -17,7 +17,6 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Application.Features.Jobs.Queries.Employee.GetJobById
 {
-    [RequireRole("Employee")]
     public sealed record GetJobByIdForEmployeeQuery(Guid JobId) : IRequest<Result<IJobResponse>>;
     public sealed class GetJobByIdForEmployeeQueryValidator : AbstractValidator<GetJobByIdForEmployeeQuery>
     {

@@ -18,7 +18,6 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Application.Features.Jobs.Queries.Employee.GetCompanyJobs
 {
-    [RequireRole("Employee")]
     public sealed record GetCompanyJobsForEmployeeQuery(Guid CompanyId, int Page, int PageSize) 
         : IRequest<Result<PaginatedList<IJobResponse>>>;
     public sealed class GetCompanyJobsForEmployeeQueryValidator : AbstractValidator<GetCompanyJobsForEmployeeQuery>

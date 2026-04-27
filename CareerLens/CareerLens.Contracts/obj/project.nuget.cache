@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "IL3UGr2eLAE=",
+  "dgSpecHash": "YN6e86xlQ8E=",
   "success": true,
   "projectFilePath": "D:\\OwnProject\\CareerLens\\CareerLens\\CareerLens.Contracts\\CareerLens.Contracts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\bogus\\35.6.5\\bogus.35.6.5.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mediatr\\14.0.0\\mediatr.14.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

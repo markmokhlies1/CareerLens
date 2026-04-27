@@ -18,7 +18,6 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Application.Features.Reviews.Queries.Employee.GetReviews
 {
-    [RequireRole("Employee")]
     public sealed record GetReviewsForEmployeeQuery(Guid CompanyId,
                                                     int Page,
                                                     int PageSize)

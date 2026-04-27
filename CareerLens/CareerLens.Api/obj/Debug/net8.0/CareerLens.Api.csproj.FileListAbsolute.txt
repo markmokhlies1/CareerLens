@@ -6,7 +6,6 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\CareerLens.A
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\CareerLens.Api.runtimeconfig.json
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\CareerLens.Api.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\CareerLens.Api.pdb
-D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\Bogus.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\FluentValidation.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\MediatR.dll
@@ -57,3 +56,5 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\obj\Debug\net8.0\refint\Caree
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\obj\Debug\net8.0\CareerLens.Api.pdb
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\obj\Debug\net8.0\CareerLens.Api.genruntimeconfig.cache
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\obj\Debug\net8.0\ref\CareerLens.Api.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Api\obj\Debug\net8.0\CareerLens.Api.sourcelink.json

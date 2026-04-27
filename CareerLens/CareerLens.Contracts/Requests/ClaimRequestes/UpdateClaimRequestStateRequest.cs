@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CareerLens.Contracts.Requests.Companies
+namespace CareerLens.Contracts.Requests.ClaimRequestes
 {
     public class UpdateClaimRequestStateRequest
     {

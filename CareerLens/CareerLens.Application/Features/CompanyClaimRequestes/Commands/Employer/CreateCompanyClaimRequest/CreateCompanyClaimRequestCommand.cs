@@ -1,5 +1,4 @@
-﻿using Bogus.Bson;
-using CareerLens.Application.Common.Behaviors;
+﻿using CareerLens.Application.Common.Behaviors;
 using CareerLens.Application.Common.Errors;
 using CareerLens.Application.Common.Helper;
 using CareerLens.Application.Common.Interfaces;

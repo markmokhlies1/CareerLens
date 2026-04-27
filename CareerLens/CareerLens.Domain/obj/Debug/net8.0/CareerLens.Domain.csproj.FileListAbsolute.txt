@@ -10,3 +10,4 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLen
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\refint\CareerLens.Domain.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.pdb
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\ref\CareerLens.Domain.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Domain\obj\Debug\net8.0\CareerLens.Domain.sourcelink.json

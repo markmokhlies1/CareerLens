@@ -1,5 +1,7 @@
 ﻿using CareerLens.Domain.Common.Results;
+using CareerLens.Domain.Companies;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -104,6 +106,14 @@ namespace CareerLens.Application.Common.Errors
         public static readonly Error TokenGenerationFailed = Error.Failure(
             code: "Auth.TokenGeneration.Failed",
             description: "Failed to generate new JWT token.");
+
+        public static readonly Error NotificationNotFound
+            = Error.NotFound("ApplicationErrors.Notification.NotFound", "Notification does not exist.");
+
+        public static readonly Error NotNotificationOwner =
+            Error.Forbidden(
+                "NotNotification.NotOwner",
+                "You can only modify your own NotNotifications.");
 
     }
 } 

@@ -13,3 +13,4 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\Care
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\refint\CareerLens.Application.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.pdb
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\ref\CareerLens.Application.dll
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Application\obj\Debug\net8.0\CareerLens.Application.sourcelink.json

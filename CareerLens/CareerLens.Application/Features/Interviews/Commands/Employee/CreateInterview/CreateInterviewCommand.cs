@@ -25,20 +25,23 @@ using System.Threading.Tasks;
 namespace CareerLens.Application.Features.Interviews.Commands.Employee.CreateInterview
 {
     [RequireRole("Employee")]
-    public sealed record CreateInterviewCommand(Guid CompanyId,
-                                                OverallExperience OverallExperience,
-                                                InterviewDifficulty InterviewDifficulty,
-                                                GettingOffer GettingOffer,
-                                                string JobTitle,
-                                                string Description,
-                                                InterviewSource? Source,
-                                                HelpingLevel? HelpingLevel,
-                                                string? Location,
-                                                InterviewDuration? Duration,
-                                                InterviewDate? Date,
-                                                InterviewStage? Stages,
-                                                List<CreateInterviewQuestionCommand> Questions)
-                                                    : IRequest<Result<IInterviewResponse>>;
+    public sealed record CreateInterviewCommand(
+        Guid CompanyId,
+        OverallExperience OverallExperience,
+        InterviewDifficulty InterviewDifficulty,
+        GettingOffer GettingOffer,
+        string JobTitle,
+        string Description,
+        InterviewSource? Source,
+        HelpingLevel? HelpingLevel,
+        string? Location,
+        int? DurationValue,
+        InterviewDurationUnit? DurationUnit,
+        int? DateYear,
+        int? DateMonth,
+        InterviewStage? Stages,
+        List<CreateInterviewQuestionCommand> Questions
+    ) : IRequest<Result<IInterviewResponse>>;
 
     public sealed record CreateInterviewQuestionCommand(string QuestionText, string? Answer) : IRequest<Result<InterviewQuestionDto>>;
 
@@ -125,6 +128,34 @@ namespace CareerLens.Application.Features.Interviews.Commands.Employee.CreateInt
                 return ApplicationErrors.CompanyNotFound;
             }
 
+            InterviewDuration? duration = null;
+
+            if (request.DurationValue.HasValue && request.DurationUnit.HasValue)
+            {
+                var durationResult = InterviewDuration.Create(
+                    request.DurationValue.Value,
+                    request.DurationUnit.Value);
+
+                if (durationResult.IsError)
+                    return durationResult.Errors;
+
+                duration = durationResult.Value;
+            }
+
+            InterviewDate? date = null;
+
+            if (request.DateYear.HasValue && request.DateMonth.HasValue)
+            {
+                var dateResult = InterviewDate.Create(
+                    request.DateYear.Value,
+                    request.DateMonth.Value);
+
+                if (dateResult.IsError)
+                    return dateResult.Errors;
+
+                date = dateResult.Value;
+            }
+
             var questions = new List<InterviewQuestion>();
 
             foreach (var q in request.Questions)
@@ -152,8 +183,8 @@ namespace CareerLens.Application.Features.Interviews.Commands.Employee.CreateInt
                 jobTitle: request.JobTitle,
                 description: request.Description,
                 location: request.Location,
-                duration: request.Duration,
-                date: request.Date,
+                duration: duration,
+                date: date,
                 stages: request.Stages
             );
 

@@ -1,7 +1,7 @@
-﻿using Bogus.DataSets;
-using CareerLens.Domain.Common;
+﻿using CareerLens.Domain.Common;
 using CareerLens.Domain.Common.Constants;
 using CareerLens.Domain.Common.Results;
+using CareerLens.Domain.Companies;
 using CareerLens.Domain.Reviews.Enums;
 using CareerLens.Domain.Salaries.Enums;
 using System;

@@ -289,10 +289,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Bogus": {
-              "target": "Package",
-              "version": "[35.6.5, )"
-            },
             "MediatR": {
               "target": "Package",
               "version": "[14.0.0, )"

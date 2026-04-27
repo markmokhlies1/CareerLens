@@ -4,13 +4,13 @@ using CareerLens.Domain.Companies;
 using CareerLens.Domain.Jobs.Enums;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; 
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CareerLens.Domain.Jobs
 {
-    public sealed class Job : AuditableEntity
+    public sealed class Job : AuditableEntity 
     {
         public Guid CompanyId { get; private set; }
         public Company? Company { get; private set; }

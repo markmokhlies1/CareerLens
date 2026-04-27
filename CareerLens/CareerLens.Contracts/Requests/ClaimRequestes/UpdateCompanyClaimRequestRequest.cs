@@ -6,23 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CareerLens.Contracts.Requests.Companies
+namespace CareerLens.Contracts.Requests.ClaimRequestes
 {
-    public class CreateCompanyClaimRequestRequest
+    public class UpdateCompanyClaimRequestRequest
     {
-        public Guid CompanyId { get; init; }
         public string AdminNote { get; init; } = default!;
         public CompanyMemberRole CompanyMemberRole { get; init; }
     }
 
-    public class CreateCompanyClaimRequestRequestValidator: AbstractValidator<CreateCompanyClaimRequestRequest>
+    public class UpdateCompanyClaimRequestRequestValidator
+        : AbstractValidator<UpdateCompanyClaimRequestRequest>
     {
-        public CreateCompanyClaimRequestRequestValidator()
+        public UpdateCompanyClaimRequestRequestValidator()
         {
-            RuleFor(x => x.CompanyId)
-                .NotEmpty()
-                .WithMessage("CompanyId is required.");
-
             RuleFor(x => x.AdminNote)
                 .NotEmpty()
                 .WithMessage("AdminNote is required.")

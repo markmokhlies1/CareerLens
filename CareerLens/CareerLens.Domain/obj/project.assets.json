@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Bogus/35.6.5": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Bogus.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Bogus.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "MediatR/14.0.0": {
         "type": "package",
         "dependencies": {
@@ -164,27 +151,6 @@
     }
   },
   "libraries": {
-    "Bogus/35.6.5": {
-      "sha512": "2FGZn+aAVHjmCgClgmGkTDBVZk0zkLvAKGaxEf5JL6b3i9JbHTE4wnuY4vHCuzlCmJdU6VZjgDfHwmYkQF8VAA==",
-      "type": "package",
-      "path": "bogus/35.6.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "bogus.128.png",
-        "bogus.35.6.5.nupkg.sha512",
-        "bogus.nuspec",
-        "lib/net40/Bogus.dll",
-        "lib/net40/Bogus.xml",
-        "lib/net6.0/Bogus.dll",
-        "lib/net6.0/Bogus.xml",
-        "lib/netstandard1.3/Bogus.dll",
-        "lib/netstandard1.3/Bogus.xml",
-        "lib/netstandard2.0/Bogus.dll",
-        "lib/netstandard2.0/Bogus.xml"
-      ]
-    },
     "MediatR/14.0.0": {
       "sha512": "r5fwUO6NBvOFKaiMRx/gRrD1MEHHOio5yEdzSLs2OMeD2e9ZKnZaBQM6A6vVBEWJF4VY41vplXmDMOY1YvpqNA==",
       "type": "package",
@@ -453,7 +419,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Bogus >= 35.6.5",
       "MediatR >= 14.0.0"
     ]
   },
@@ -507,10 +472,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "Bogus": {
-            "target": "Package",
-            "version": "[35.6.5, )"
-          },
           "MediatR": {
             "target": "Package",
             "version": "[14.0.0, )"

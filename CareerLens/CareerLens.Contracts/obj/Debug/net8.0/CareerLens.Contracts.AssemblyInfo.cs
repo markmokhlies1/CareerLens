@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CareerLens.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22ada6127ab139f7b2e55552705ee0a85cce3e16")]
 [assembly: System.Reflection.AssemblyProductAttribute("CareerLens.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CareerLens.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

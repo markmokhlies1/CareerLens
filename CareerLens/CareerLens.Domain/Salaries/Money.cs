@@ -1,5 +1,4 @@
-﻿using Bogus.DataSets;
-using CareerLens.Domain.Common.Results;
+﻿using CareerLens.Domain.Common.Results;
 
 namespace CareerLens.Domain.Salaries
 {

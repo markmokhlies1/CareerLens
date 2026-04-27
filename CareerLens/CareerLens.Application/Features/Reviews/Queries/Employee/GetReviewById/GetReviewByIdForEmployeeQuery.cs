@@ -16,7 +16,6 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Application.Features.Reviews.Queries.Employee.GetReviewById
 {
-    [RequireRole("Employee")]
     public sealed record GetReviewByIdForEmployeeQuery(Guid ReviewId)
     : IRequest<Result<IReviewResponse>>;
 

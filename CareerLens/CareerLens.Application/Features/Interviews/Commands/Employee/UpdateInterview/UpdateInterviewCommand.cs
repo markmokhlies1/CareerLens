@@ -33,8 +33,10 @@ namespace CareerLens.Application.Features.Interviews.Commands.Employee.UpdateInt
                                                 HelpingLevel? HelpingLevel,
                                                 List<UpdateInterviewQuestionCommand> Questions,
                                                 string? Location = null,
-                                                InterviewDuration? Duration = null,
-                                                InterviewDate? Date = null,
+                                                int? DurationValue = null,
+                                                InterviewDurationUnit? DurationUnit = null,
+                                                int? DateYear = null,
+                                                int? DateMonth = null,
                                                 InterviewStage? Stages = null) 
         : IRequest<Result<Updated>>;
 
@@ -128,6 +130,35 @@ namespace CareerLens.Application.Features.Interviews.Commands.Employee.UpdateInt
             if (interview.UserId != userId)
                 return ApplicationErrors.NotInterviewOwner;
 
+            InterviewDuration? duration = null;
+
+            if (request.DurationValue.HasValue && request.DurationUnit.HasValue)
+            {
+                var durationResult = InterviewDuration.Create(
+                    request.DurationValue.Value,
+                    request.DurationUnit.Value);
+
+                if (durationResult.IsError)
+                    return durationResult.Errors;
+
+                duration = durationResult.Value;
+            }
+
+            InterviewDate? date = null;
+
+            if (request.DateYear.HasValue && request.DateMonth.HasValue)
+            {
+                var dateResult = InterviewDate.Create(
+                    request.DateYear.Value,
+                    request.DateMonth.Value);
+
+                if (dateResult.IsError)
+                    return dateResult.Errors;
+
+                date = dateResult.Value;
+            }
+
+
             var questions = new List<InterviewQuestion>();
 
             foreach (var q in request.Questions)
@@ -156,8 +187,8 @@ namespace CareerLens.Application.Features.Interviews.Commands.Employee.UpdateInt
                 helpingLevel: request.HelpingLevel,
                 interviewQuestions: questions,
                 location: request.Location,
-                duration: request.Duration,
-                date: request.Date,
+                duration: duration,
+                date: date,
                 stages: request.Stages
             );
 

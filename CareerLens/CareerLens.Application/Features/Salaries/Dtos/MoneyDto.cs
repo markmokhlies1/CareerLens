@@ -1,4 +1,4 @@
-﻿using Bogus.DataSets;
+﻿using CareerLens.Domain.Salaries;
 
 namespace CareerLens.Application.Features.Salaries.Dtos
 {

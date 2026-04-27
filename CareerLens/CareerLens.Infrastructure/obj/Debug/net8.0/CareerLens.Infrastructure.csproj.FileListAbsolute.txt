@@ -17,3 +17,4 @@ D:\OwnProject\CareerLens\CareerLens\CareerLens.Infrastructure\obj\Debug\net8.0\C
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Infrastructure\obj\Debug\net8.0\ref\CareerLens.Infrastructure.dll
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Infrastructure\bin\Debug\net8.0\CareerLens.Infrastructure.runtimeconfig.json
 D:\OwnProject\CareerLens\CareerLens\CareerLens.Infrastructure\obj\Debug\net8.0\CareerLens.Infrastructure.genruntimeconfig.cache
+D:\OwnProject\CareerLens\CareerLens\CareerLens.Infrastructure\obj\Debug\net8.0\CareerLens.Infrastructure.sourcelink.json

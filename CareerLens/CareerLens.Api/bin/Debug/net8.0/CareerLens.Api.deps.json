@@ -10,18 +10,11 @@
         "dependencies": {
           "CareerLens.Application": "1.0.0",
           "CareerLens.Contracts": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
           "CareerLens.Api.dll": {}
-        }
-      },
-      "Bogus/35.6.5": {
-        "runtime": {
-          "lib/net6.0/Bogus.dll": {
-            "assemblyVersion": "35.6.5.0",
-            "fileVersion": "35.6.5.0"
-          }
         }
       },
       "FluentValidation/12.1.1": {
@@ -63,6 +56,14 @@
           "lib/netstandard2.0/MediatR.Contracts.dll": {
             "assemblyVersion": "2.0.1.0",
             "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Versioning/5.1.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.8270.41513"
           }
         }
       },
@@ -277,6 +278,10 @@
         }
       },
       "CareerLens.Contracts/1.0.0": {
+        "dependencies": {
+          "CareerLens.Domain": "1.0.0",
+          "FluentValidation": "12.1.1"
+        },
         "runtime": {
           "CareerLens.Contracts.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -286,7 +291,6 @@
       },
       "CareerLens.Domain/1.0.0": {
         "dependencies": {
-          "Bogus": "35.6.5",
           "MediatR": "14.0.0"
         },
         "runtime": {
@@ -303,13 +307,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Bogus/35.6.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2FGZn+aAVHjmCgClgmGkTDBVZk0zkLvAKGaxEf5JL6b3i9JbHTE4wnuY4vHCuzlCmJdU6VZjgDfHwmYkQF8VAA==",
-      "path": "bogus/35.6.5",
-      "hashPath": "bogus.35.6.5.nupkg.sha512"
     },
     "FluentValidation/12.1.1": {
       "type": "package",
@@ -338,6 +335,13 @@
       "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
       "path": "mediatr.contracts/2.0.1",
       "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UX8w9BlCiZpr6Ox4YAve1w0CkI1CAovukGNzKd7v0+5pZc8lzuG5tRovucr1RWIKHs0E/Yx8563CN7KzaB3bpw==",
+      "path": "microsoft.aspnetcore.mvc.versioning/5.1.0",
+      "hashPath": "microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/8.0.13": {
       "type": "package",

@@ -15,8 +15,8 @@ using System.Threading.Tasks;
  
 namespace CareerLens.Domain.Interviews
 {
-    public sealed class Interview : AuditableEntity
-    { 
+    public sealed class Interview : AuditableEntity 
+    {  
         public Guid UserId { get; private set; }
         public User? User { get; private set; }
         public Guid CompanyId { get; private set; }
