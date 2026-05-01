@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CareerLens.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab640d67e76a1066ba5d2e31d23827bc1062919e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdf466dc0eccaeba092f0fb378e23c987ca226ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("CareerLens.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CareerLens.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

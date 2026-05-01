@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36804.6 d17.14
+VisualStudioVersion = 17.14.36804.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Api", "CareerLens.Api\CareerLens.Api.csproj", "{12211FA5-3935-4AD9-A5DD-2766B384C8A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Contracts", "CareerLens.Contracts\CareerLens.Contracts.csproj", "{673FF08D-34D6-4153-A077-C77396349C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Tests.Common", "CareerLens.Tests.Common\CareerLens.Tests.Common.csproj", "{DCF12A67-BC95-402A-B907-FA34FD970154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerLens.Tests.Domain", "CareerLens.Tests.Domain\CareerLens.Tests.Domain.csproj", "{661A1C2A-73FA-40C1-B976-F7FE1B4D5902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,14 @@ Global
 		{673FF08D-34D6-4153-A077-C77396349C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673FF08D-34D6-4153-A077-C77396349C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673FF08D-34D6-4153-A077-C77396349C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF12A67-BC95-402A-B907-FA34FD970154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF12A67-BC95-402A-B907-FA34FD970154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF12A67-BC95-402A-B907-FA34FD970154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF12A67-BC95-402A-B907-FA34FD970154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661A1C2A-73FA-40C1-B976-F7FE1B4D5902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661A1C2A-73FA-40C1-B976-F7FE1B4D5902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661A1C2A-73FA-40C1-B976-F7FE1B4D5902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661A1C2A-73FA-40C1-B976-F7FE1B4D5902}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +65,8 @@ Global
 		{C8DAA82C-F268-49ED-9649-37C304A0C741} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{12211FA5-3935-4AD9-A5DD-2766B384C8A3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{673FF08D-34D6-4153-A077-C77396349C2C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{DCF12A67-BC95-402A-B907-FA34FD970154} = {E2A5DA9E-A698-4CC7-9E8B-4E67DF2AE967}
+		{661A1C2A-73FA-40C1-B976-F7FE1B4D5902} = {E2A5DA9E-A698-4CC7-9E8B-4E67DF2AE967}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99E685A5-0D8D-4853-AC34-AAEF50324D0B}
