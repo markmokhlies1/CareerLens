@@ -21,17 +21,17 @@ namespace CareerLens.Application.Common.Behaviors
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             var roleAttributes = request.GetType()
-                .GetCustomAttributes<RequireRoleAttribute>(true);
+            .GetCustomAttributes<RequireRoleAttribute>(true);
 
             if (!roleAttributes.Any())
                 return await next();
 
-            if (string.IsNullOrEmpty(user.Id))
+            if (string.IsNullOrEmpty(user.Id) || !Guid.TryParse(user.Id, out var userId))
                 throw new UnauthorizedAccessException("User is not authenticated");
 
             foreach (var attr in roleAttributes)
             {
-                if (await identityService.IsInRoleAsync(user.Id, attr.Role))
+                if (await identityService.IsInRoleAsync(userId, attr.Role))
                     return await next();
             }
 

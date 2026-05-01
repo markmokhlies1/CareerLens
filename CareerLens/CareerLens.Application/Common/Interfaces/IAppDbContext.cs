@@ -6,6 +6,8 @@ using CareerLens.Domain.Companies;
 using CareerLens.Domain.Companies.CompanyClaimRequests;
 using CareerLens.Domain.Companies.CompanyMembers;
 using CareerLens.Domain.Companies.CompanyMembers.Enums;
+using CareerLens.Domain.DomainUsers;
+using CareerLens.Domain.DomainUsers.Enums;
 using CareerLens.Domain.Identity;
 using CareerLens.Domain.Interviews;
 using CareerLens.Domain.Interviews.InterviewQuestions;
@@ -14,8 +16,8 @@ using CareerLens.Domain.Notifications;
 using CareerLens.Domain.Notifications.Enums;
 using CareerLens.Domain.Reviews;
 using CareerLens.Domain.Salaries;
-using CareerLens.Domain.DomainUsers;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +42,8 @@ namespace CareerLens.Application.Common.Interfaces
         public DbSet<RefreshToken> RefreshTokens { get; }
         public DbSet<User> DomainUsers { get;}
         public DbSet<Notification> Notifications { get; }
+        DatabaseFacade Database { get; }
+
         public Task<int> SaveChangesAsync(CancellationToken cancellationToken);
         public DbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
@@ -52,15 +56,17 @@ namespace CareerLens.Application.Common.Interfaces
     }
     public interface IIdentityService
     {
-        Task<bool> IsInRoleAsync(string userId, string role);
+        Task<bool> IsInRoleAsync(Guid userId, string role);
 
-        Task<bool> AuthorizeAsync(string userId, string? policyName);
+        Task<bool> AuthorizeAsync(Guid userId, string? policyName);
 
         Task<Result<AppUserDto>> AuthenticateAsync(string email, string password);
 
-        Task<Result<AppUserDto>> GetUserByIdAsync(string userId);
+        Task<Result<AppUserDto>> GetUserByIdAsync(Guid userId);
 
-        Task<string?> GetUserNameAsync(string userId);
+        Task<string?> GetUserNameAsync(Guid userId);
+        public  Task<Result<Guid>> CreateUserAsync(Guid id, string email, string password, Role role);
+        
     }
     #endregion
 

@@ -3,6 +3,7 @@ using CareerLens.Domain.Common;
 using CareerLens.Domain.Companies;
 using CareerLens.Domain.Companies.CompanyClaimRequests;
 using CareerLens.Domain.Companies.CompanyMembers;
+using CareerLens.Domain.DomainUsers;
 using CareerLens.Domain.Identity;
 using CareerLens.Domain.Interviews;
 using CareerLens.Domain.Interviews.InterviewQuestions;
@@ -10,11 +11,12 @@ using CareerLens.Domain.Jobs;
 using CareerLens.Domain.Notifications;
 using CareerLens.Domain.Reviews;
 using CareerLens.Domain.Salaries;
-using CareerLens.Domain.DomainUsers;
 using CareerLens.Infrastructure.Services;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,7 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Infrastructure.Data
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options, IMediator mediator) : IdentityDbContext<AppUser>(options), IAppDbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options, IMediator mediator) : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>(options), IAppDbContext
     {
         public DbSet<Company> Companies => Set<Company>();
 
@@ -48,6 +50,8 @@ namespace CareerLens.Infrastructure.Data
         public DbSet<Notification> Notifications => Set<Notification>();
 
         public DbSet<User> DomainUsers => Set<User>();
+
+        DatabaseFacade IAppDbContext.Database => Database;
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

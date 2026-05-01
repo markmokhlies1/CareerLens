@@ -26,10 +26,10 @@ namespace CareerLens.Infrastructure.Data.Configurations
                    .HasForeignKey(i => i.UserId)
                    .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany<InterviewQuestion>("_interviewQuestions")
-                   .WithOne()
-                   .HasForeignKey("InterviewId")
-                   .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(i => i.InterviewQuestions)        
+               .WithOne()
+               .HasForeignKey("InterviewId")
+               .OnDelete(DeleteBehavior.Cascade);
 
             builder.Navigation(i => i.InterviewQuestions)
                    .UsePropertyAccessMode(PropertyAccessMode.Field);
@@ -87,26 +87,24 @@ namespace CareerLens.Infrastructure.Data.Configurations
             builder.OwnsOne(i => i.Date, date =>
             {
                 date.Property(d => d.Year)
-                    .HasColumnName("InterviewYear")
-                    .IsRequired(false);               
+                    .HasColumnName("InterviewYear");
 
                 date.Property(d => d.Month)
-                    .HasColumnName("InterviewMonth")
-                    .IsRequired();
+                    .HasColumnName("InterviewMonth");
+
             });
+            builder.Navigation(i => i.Date).IsRequired(false);
 
             
             builder.OwnsOne(i => i.Duration, dur =>
             {
                 dur.Property(d => d.Value)
-                   .HasColumnName("DurationValue")
-                   .IsRequired(false);
+                   .HasColumnName("DurationValue");
 
                 dur.Property(d => d.Unit)
                    .HasColumnName("DurationUnit")
-                   .HasConversion<string>()           
-                   .HasMaxLength(10)
-                   .IsRequired(false);
+                   .HasConversion<string>()
+                   .HasMaxLength(10);
             });
         }
     }

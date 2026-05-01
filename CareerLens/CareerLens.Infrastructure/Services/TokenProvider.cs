@@ -71,8 +71,9 @@ namespace CareerLens.Infrastructure.Services
 
             var claims = new List<Claim>
             {
-                new (JwtRegisteredClaimNames.Sub, user.UserId!),
-                new (JwtRegisteredClaimNames.Email, user.Email!),
+                new(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),  
+                new(ClaimTypes.NameIdentifier, user.UserId.ToString()),    
+                new(JwtRegisteredClaimNames.Email, user.Email!),
             };
 
             foreach (var role in user.Roles)

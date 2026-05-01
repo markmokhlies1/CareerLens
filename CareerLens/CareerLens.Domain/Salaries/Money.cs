@@ -6,7 +6,7 @@ namespace CareerLens.Domain.Salaries
     {
         public decimal Amount { get; }
         public Currency Currency { get; }
-
+        private Money() { }
         private Money(decimal amount, Currency currency)
         {
             Amount = amount;

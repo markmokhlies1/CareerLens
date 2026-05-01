@@ -38,16 +38,17 @@ namespace CareerLens.Application.Common.Behaviours
             if (elapsedMilliseconds > 500)
             {
                 var requestName = typeof(TRequest).Name;
-                var userId = _user.Id ?? string.Empty;
+                var userIdString = _user.Id ?? string.Empty;
                 var userName = string.Empty;
 
-                if (!string.IsNullOrEmpty(userId))
+                if (!string.IsNullOrEmpty(userIdString) && Guid.TryParse(userIdString, out var userId))
                 {
                     userName = await _identityService.GetUserNameAsync(userId);
                 }
 
                 _logger.LogWarning(
-                    "Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}", requestName, elapsedMilliseconds, userId, userName, request);
+                    "Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
+                    requestName, elapsedMilliseconds, userIdString, userName, request);
             }
 
             return response;

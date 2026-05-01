@@ -75,98 +75,91 @@ namespace CareerLens.Infrastructure.Data.Configurations
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("BasePayAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired();
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("BasePayCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired();
+                            .HasMaxLength(3);
                 });
             });
-
+            builder.Navigation(s => s.BasePay).IsRequired();  
 
             builder.OwnsOne(s => s.Bonus, money =>
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("BonusAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired(false);
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("BonusCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired(false);
+                            .HasMaxLength(3);
                 });
             });
+            builder.Navigation(s => s.Bonus).IsRequired(false);   
 
             builder.OwnsOne(s => s.Stock, money =>
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("StockAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired(false);
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("StockCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired(false);
+                            .HasMaxLength(3);
                 });
             });
+            builder.Navigation(s => s.Stock).IsRequired(false);
 
             builder.OwnsOne(s => s.ProfitSharing, money =>
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("ProfitSharingAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired(false);
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("ProfitSharingCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired(false);
+                            .HasMaxLength(3);
                 });
             });
+            builder.Navigation(s => s.ProfitSharing).IsRequired(false);
 
             builder.OwnsOne(s => s.Tips, money =>
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("TipsAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired(false);
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("TipsCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired(false);
+                            .HasMaxLength(3);
                 });
             });
+            builder.Navigation(s => s.Tips).IsRequired(false);
 
             builder.OwnsOne(s => s.Commission, money =>
             {
                 money.Property(m => m.Amount)
                      .HasColumnName("CommissionAmount")
-                     .HasPrecision(18, 2)
-                     .IsRequired(false);
+                     .HasPrecision(18, 2);
 
                 money.OwnsOne(m => m.Currency, currency =>
                 {
                     currency.Property(c => c.Code)
                             .HasColumnName("CommissionCurrency")
-                            .HasMaxLength(3)
-                            .IsRequired(false);
+                            .HasMaxLength(3);
                 });
             });
+            builder.Navigation(s => s.Commission).IsRequired(false);
         }
     }
 }

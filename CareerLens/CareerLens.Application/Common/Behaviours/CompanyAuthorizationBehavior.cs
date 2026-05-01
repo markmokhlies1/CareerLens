@@ -20,7 +20,7 @@ namespace CareerLens.Application.Common.Behaviours
             if (string.IsNullOrEmpty(user.Id) || !Guid.TryParse(user.Id, out var userId))
                 throw new UnauthorizedAccessException("User is not authenticated");
 
-            if (await identityService.IsInRoleAsync(user.Id, "Admin"))
+            if (await identityService.IsInRoleAsync(userId, "Admin"))
                 return await next();
 
             var hasAccess = await context.CompanyMembers

@@ -14,43 +14,26 @@ namespace CareerLens.Infrastructure.Data.Configurations
             builder.ToTable("Companies");
 
             builder.HasKey(c => c.Id);
+            builder.Property(c => c.Id).ValueGeneratedNever();
 
-            builder.Property(c => c.Id)
-                   .ValueGeneratedNever();
-
-            builder.Property(c => c.Name)
-                   .IsRequired()
-                   .HasMaxLength(100);
-
-            builder.Property(c => c.Industry)
-                   .IsRequired()
-                   .HasMaxLength(100);
-
-            builder.Property(c => c.Location)
-                   .IsRequired()
-                   .HasMaxLength(150);
-
-            builder.Property(c => c.Website)
-                   .IsRequired()
-                   .HasMaxLength(500);
+            builder.Property(c => c.Name).IsRequired().HasMaxLength(100);
+            builder.Property(c => c.Industry).IsRequired().HasMaxLength(100);
+            builder.Property(c => c.Location).IsRequired().HasMaxLength(150);
+            builder.Property(c => c.Website).IsRequired().HasMaxLength(500);
 
             builder.Property(c => c.Description)
                    .IsRequired()
                    .HasMaxLength(CareerLensConstants.CompanyDescriptionMaxLenght);
 
-            builder.Property(c => c.FoundedYear)
-                   .IsRequired();
-
-            builder.Property(c => c.IsClaimed)
-                   .IsRequired()
-                   .HasDefaultValue(false);
+            builder.Property(c => c.FoundedYear).IsRequired();
+            builder.Property(c => c.IsClaimed).IsRequired().HasDefaultValue(false);
 
             builder.Property(c => c.Size)
                    .HasConversion<string>()
                    .HasMaxLength(30)
                    .IsRequired();
 
-            builder.HasMany<CompanyMember>("_members")
+            builder.HasMany(c => c.Members)              
                    .WithOne()
                    .HasForeignKey("CompanyId")
                    .OnDelete(DeleteBehavior.Cascade);
@@ -58,14 +41,13 @@ namespace CareerLens.Infrastructure.Data.Configurations
             builder.Navigation(c => c.Members)
                    .UsePropertyAccessMode(PropertyAccessMode.Field);
 
-            builder.HasMany<CompanyClaimRequest>("_requests")
+            builder.HasMany(c => c.Requests)             
                    .WithOne()
                    .HasForeignKey("CompanyId")
                    .OnDelete(DeleteBehavior.Cascade);
 
             builder.Navigation(c => c.Requests)
                    .UsePropertyAccessMode(PropertyAccessMode.Field);
-            
         }
     }
 }

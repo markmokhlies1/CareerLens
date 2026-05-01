@@ -20,16 +20,16 @@ namespace CareerLens.Application.Common.Behaviours
         public async Task Process(TRequest request, CancellationToken cancellationToken)
         {
             var requestName = typeof(TRequest).Name;
-            var userId = _user.Id ?? string.Empty;
+            var userIdString = _user.Id ?? string.Empty;
             string? userName = string.Empty;
 
-            if (!string.IsNullOrEmpty(userId))
+            if (!string.IsNullOrEmpty(userIdString) && Guid.TryParse(userIdString, out var userId))
             {
                 userName = await _identityService.GetUserNameAsync(userId);
             }
 
             _logger.LogInformation(
-                "Request: {Name} {@UserId} {@UserName} {@Request}", requestName, userId, userName, request);
+                "Request: {Name} {@UserId} {@UserName} {@Request}", requestName, userIdString, userName, request);
         }
     }
 }

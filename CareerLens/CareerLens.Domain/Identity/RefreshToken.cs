@@ -12,13 +12,13 @@ namespace CareerLens.Domain.Identity
     {
 
         public string? Token { get; }
-        public string? UserId { get; }
+        public Guid UserId { get; }
         public DateTimeOffset ExpiresOnUtc { get; }
 
         private RefreshToken()
         { }
 
-        private RefreshToken(Guid id, string? token, string? userId, DateTimeOffset expiresOnUtc)
+        private RefreshToken(Guid id, string? token, Guid userId, DateTimeOffset expiresOnUtc)
             : base(id)
         {
             Token = token;
@@ -26,7 +26,7 @@ namespace CareerLens.Domain.Identity
             ExpiresOnUtc = expiresOnUtc;
         }
 
-        public static Result<RefreshToken> Create(Guid id, string? token, string? userId, DateTimeOffset expiresOnUtc)
+        public static Result<RefreshToken> Create(Guid id, string? token, Guid userId, DateTimeOffset expiresOnUtc)
         {
             if (id == Guid.Empty)
             {
@@ -38,7 +38,7 @@ namespace CareerLens.Domain.Identity
                 return RefreshTokenErrors.TokenRequired;
             }
 
-            if (string.IsNullOrWhiteSpace(userId))
+            if (string.IsNullOrWhiteSpace(userId.ToString()))
             {
                 return RefreshTokenErrors.UserIdRequired;
             }

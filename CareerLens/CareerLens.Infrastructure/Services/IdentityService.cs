@@ -1,6 +1,7 @@
 ﻿using CareerLens.Application.Common.Interfaces;
 using CareerLens.Application.Features.Identity.Dtos;
 using CareerLens.Domain.Common.Results;
+using CareerLens.Domain.DomainUsers.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CareerLens.Infrastructure.Services
 {
-    public class AppUser : IdentityUser;
+    public class AppUser : IdentityUser<Guid>;
     public class IdentityService(UserManager<AppUser> userManager, IUserClaimsPrincipalFactory<AppUser> userClaimsPrincipalFactory, IAuthorizationService authorizationService) : IIdentityService
     {
         private readonly UserManager<AppUser> _userManager = userManager;
@@ -41,9 +42,9 @@ namespace CareerLens.Infrastructure.Services
             return new AppUserDto(user.Id, user.Email!, await _userManager.GetRolesAsync(user), await _userManager.GetClaimsAsync(user));
         }
 
-        public async Task<bool> AuthorizeAsync(string userId, string? policyName)
+        public async Task<bool> AuthorizeAsync(Guid userId, string? policyName)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId.ToString());
 
             if (user == null)
             {
@@ -57,9 +58,9 @@ namespace CareerLens.Infrastructure.Services
             return result.Succeeded;
         }
 
-        public async Task<Result<AppUserDto>> GetUserByIdAsync(string userId)
+        public async Task<Result<AppUserDto>> GetUserByIdAsync(Guid userId)
         {
-            var user = await _userManager.FindByIdAsync(userId) ?? throw new InvalidOperationException(nameof(userId));
+            var user = await _userManager.FindByIdAsync(userId.ToString()) ?? throw new InvalidOperationException(nameof(userId));
 
             var roles = await _userManager.GetRolesAsync(user);
 
@@ -68,18 +69,43 @@ namespace CareerLens.Infrastructure.Services
             return new AppUserDto(user.Id, user.Email!, roles, claims);
         }
 
-        public async Task<string?> GetUserNameAsync(string userId)
+        public async Task<string?> GetUserNameAsync(Guid userId)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId.ToString());
 
             return user?.UserName;
         }
 
-        public async Task<bool> IsInRoleAsync(string userId, string role)
+        public async Task<bool> IsInRoleAsync(Guid userId, string role)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId.ToString());
 
             return user != null && await _userManager.IsInRoleAsync(user, role);
         }
+
+        public async Task<Result<Guid>> CreateUserAsync(Guid id, string email, string password, Role role)
+        {
+            var appUser = new AppUser
+            {
+                Id = id,                    
+                UserName = email,
+                Email = email
+            };
+
+            var result = await _userManager.CreateAsync(appUser, password);
+
+            if (!result.Succeeded)
+            {
+                var errors = result.Errors
+                    .Select(e => Error.Validation(e.Code, e.Description))
+                    .ToList();
+                return errors;
+            }
+
+            await _userManager.AddToRoleAsync(appUser, role.ToString());
+
+            return id;
+        }
+        
     }
 }
