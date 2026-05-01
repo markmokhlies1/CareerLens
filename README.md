@@ -88,6 +88,7 @@ API → Application → Domain ← Infrastructure
 ---
 
 ## 📁 Project Structure
+```
 CareerLens.Domain/
 ├── Entities/
 │   ├── User.cs
