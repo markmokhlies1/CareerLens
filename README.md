@@ -88,6 +88,92 @@ API → Application → Domain ← Infrastructure
 ---
 
 ## 📁 Project Structure
+CareerLens.Domain/
+├── Entities/
+│   ├── User.cs
+│   ├── Company.cs
+│   ├── Review.cs
+│   ├── Interview.cs
+│   ├── InterviewQuestion.cs
+│   ├── Job.cs
+│   ├── Salary.cs
+│   └── Notification.cs
+├── ValueObjects/
+│   ├── Money.cs
+│   ├── Currency.cs
+│   ├── InterviewDate.cs
+│   ├── InterviewDuration.cs
+│   └── InterviewStage.cs
+├── Enums/
+│   ├── ReviewStatus.cs
+│   ├── InterviewStatus.cs
+│   ├── JobStatus.cs
+│   ├── SalaryStatus.cs
+│   ├── NotificationType.cs
+│   └── ...
+├── Events/
+│   ├── ReviewApproved.cs
+│   ├── ReviewRejected.cs
+│   ├── InterviewApproved.cs
+│   ├── InterviewRejected.cs
+│   ├── SalaryApproved.cs
+│   └── SalaryRejected.cs
+└── Errors/
+    ├── ReviewErrors.cs
+    ├── InterviewErrors.cs
+    ├── JobErrors.cs
+    ├── SalaryErrors.cs
+    └── NotificationErrors.cs
+
+CareerLens.Application/
+├── Features/
+│   ├── Reviews/
+│   ├── Interviews/
+│   ├── Jobs/
+│   ├── Salaries/
+│   └── Notifications/
+│       ├── Commands/
+│       │   ├── MarkNotificationAsRead/
+│       │   ├── MarkAllNotificationsAsRead/
+│       │   └── DeleteNotification/
+│       └── Queries/
+│           ├── GetNotifications/
+│           └── GetUnreadNotificationsCount/
+└── Common/
+    ├── Behaviors/
+    │   ├── ValidationBehavior.cs
+    │   └── LoggingBehavior.cs
+    └── Models/
+        └── PaginatedList.cs
+
+CareerLens.Infrastructure/
+├── Persistence/
+│   ├── AppDbContext.cs
+│   └── Configurations/
+├── Services/
+│   ├── JwtService.cs
+│   ├── CurrentUserService.cs
+│   ├── RealTimeNotificationService.cs
+│   └── PasswordHasher.cs
+└── Hubs/
+    └── NotificationHub.cs
+
+CareerLens.API/
+├── Controllers/
+│   ├── ReviewsController.cs
+│   ├── InterviewsController.cs
+│   ├── JobsController.cs
+│   ├── SalariesController.cs
+│   └── NotificationsController.cs
+├── Requests/
+│   ├── Reviews/
+│   ├── Interviews/
+│   ├── Jobs/
+│   ├── Salaries/
+│   └── Notifications/
+└── Common/
+    └── Base/
+        └── ApiController.cs
 
 ---
 
@@ -153,8 +239,7 @@ Every resource follows a consistent `/manage` pattern:
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Docker](https://www.docker.com/) (optional)
+- SQL server ](https://www.sqlserver.org/)
 
 ### Run Locally
 
